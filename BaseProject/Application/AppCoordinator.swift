@@ -1,5 +1,5 @@
 import Foundation
-import XCoordinator
+import ZCoordinator
 
 enum AppRoute: Route {
     case main

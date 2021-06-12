@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC7842692674A125006D28AF /* ZCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = AC7842682674A125006D28AF /* ZCoordinator */; };
 		AC8AD79125C71FE3001EE8BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AD79025C71FE3001EE8BA /* AppDelegate.swift */; };
 		AC8AD79325C71FE3001EE8BA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AD79225C71FE3001EE8BA /* SceneDelegate.swift */; };
 		AC8AD79525C71FE3001EE8BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AD79425C71FE3001EE8BA /* ViewController.swift */; };
@@ -14,7 +15,6 @@
 		AC8AD79D25C71FE3001EE8BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC8AD79B25C71FE3001EE8BA /* LaunchScreen.storyboard */; };
 		AC8AD7B225C72162001EE8BA /* HelperKit in Frameworks */ = {isa = PBXBuildFile; productRef = AC8AD7B125C72162001EE8BA /* HelperKit */; };
 		AC8AD7B625C7217B001EE8BA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AC8AD7B525C7217B001EE8BA /* SnapKit */; };
-		AC8AD7BA25C721B1001EE8BA /* XCoordinator in Frameworks */ = {isa = PBXBuildFile; productRef = AC8AD7B925C721B1001EE8BA /* XCoordinator */; };
 		AC8AD7BD25C72211001EE8BA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8AD7BC25C72211001EE8BA /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,7 +35,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8AD7B225C72162001EE8BA /* HelperKit in Frameworks */,
-				AC8AD7BA25C721B1001EE8BA /* XCoordinator in Frameworks */,
+				AC7842692674A125006D28AF /* ZCoordinator in Frameworks */,
 				AC8AD7B625C7217B001EE8BA /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -108,7 +108,7 @@
 			packageProductDependencies = (
 				AC8AD7B125C72162001EE8BA /* HelperKit */,
 				AC8AD7B525C7217B001EE8BA /* SnapKit */,
-				AC8AD7B925C721B1001EE8BA /* XCoordinator */,
+				AC7842682674A125006D28AF /* ZCoordinator */,
 			);
 			productName = BaseProject;
 			productReference = AC8AD78D25C71FE3001EE8BA /* BaseProject.app */;
@@ -140,7 +140,7 @@
 			packageReferences = (
 				AC8AD7B025C72162001EE8BA /* XCRemoteSwiftPackageReference "HelperKit" */,
 				AC8AD7B425C7217B001EE8BA /* XCRemoteSwiftPackageReference "SnapKit" */,
-				AC8AD7B825C721B1001EE8BA /* XCRemoteSwiftPackageReference "XCoordinator" */,
+				AC7842672674A125006D28AF /* XCRemoteSwiftPackageReference "ZCoordinator" */,
 			);
 			productRefGroup = AC8AD78E25C71FE3001EE8BA /* Products */;
 			projectDirPath = "";
@@ -371,33 +371,38 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AC7842672674A125006D28AF /* XCRemoteSwiftPackageReference "ZCoordinator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marionauta/ZCoordinator";
+			requirement = {
+				kind = revision;
+				revision = ee58c3afed29ddf11ead4fd451323429b7597a59;
+			};
+		};
 		AC8AD7B025C72162001EE8BA /* XCRemoteSwiftPackageReference "HelperKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/marionauta/HelperKit";
 			requirement = {
-				kind = upToNextMinorVersion;
-				minimumVersion = 0.6.0;
+				kind = exactVersion;
+				version = 0.8.0;
 			};
 		};
 		AC8AD7B425C7217B001EE8BA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.1;
-			};
-		};
-		AC8AD7B825C721B1001EE8BA /* XCRemoteSwiftPackageReference "XCoordinator" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/quickbirdstudios/XCoordinator";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.7;
+				kind = exactVersion;
+				version = 5.0.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		AC7842682674A125006D28AF /* ZCoordinator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC7842672674A125006D28AF /* XCRemoteSwiftPackageReference "ZCoordinator" */;
+			productName = ZCoordinator;
+		};
 		AC8AD7B125C72162001EE8BA /* HelperKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = AC8AD7B025C72162001EE8BA /* XCRemoteSwiftPackageReference "HelperKit" */;
@@ -407,11 +412,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AC8AD7B425C7217B001EE8BA /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
-		};
-		AC8AD7B925C721B1001EE8BA /* XCoordinator */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = AC8AD7B825C721B1001EE8BA /* XCRemoteSwiftPackageReference "XCoordinator" */;
-			productName = XCoordinator;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
